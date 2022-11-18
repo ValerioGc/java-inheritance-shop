@@ -10,8 +10,8 @@ public class Product {
 	private int price;
 	private int tax;
 	
-	public static char eur = '\u20ac';
-	public static char perc = '%';
+	public static final char EUR = '\u20ac';
+	public static final char PERC = '%';
 	
 	public Product() {
 		Random rnd = new Random();
@@ -66,7 +66,7 @@ public class Product {
 		return tax;
 	}
 	public void setTax(int tax) {
-		if ((price > 1) && (price <= 100)) {
+		if ((tax > 1) && (tax <= 100)) {
 			this.tax = tax;
 		} else {
 			System.err.println("Le tasse devono essere comprese tra 0 e 100%");
@@ -80,9 +80,9 @@ public class Product {
 				"\nCodice: " + getCode() +
 				"\nNome: " + getName() +
 				"\nBrand: " + getBrand() +
-				"\nPrezzo: " + getPrice() + " " + eur +
-				"\nTasse: " + getTax() + " " + perc + 
-				"\nPrezzo con tasse: " + getTaxedPrice() + " " + eur +
+				"\nPrezzo: " + getPrice() + " " + EUR +
+				"\nTasse: " + getTax() + " " + PERC + 
+				"\nPrezzo con tasse: " + getTaxedPrice() + " " + EUR +
 				"\n----------------------------------"; 
 	}
 	
