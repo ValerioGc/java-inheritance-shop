@@ -11,6 +11,7 @@ public class Smartphone extends Product{
 	public Smartphone(int memory) {
 		Random rnd = new Random();
 		this.imeiCode = rnd.nextInt(9000) + 1000;
+		this.memory = memory;
 	}
 	
 	public Smartphone(String name, String brand, int price, int tax, int memory) {
