@@ -31,7 +31,7 @@ public class Smartphone extends Product{
 	}
 	@Override
 	public String toString(){
-		return "Prodotto: Smartphone ---------------------" +
+		return "Prodotto: Smartphone" +
 				"\nNome: "  + getName() + 
 				"\nMarca: "  + getBrand() +
 				"\nIMEI: "  +  getImeiCode() + 

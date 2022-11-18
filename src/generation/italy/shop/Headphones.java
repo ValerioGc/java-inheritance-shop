@@ -41,7 +41,7 @@ public class Headphones extends Product {
 
 	@Override
 	public String toString(){
-		return "Prodotto: Cuffie ---------------------" +
+		return "Prodotto: Cuffie" +
 				"\nNome: "  + getName() + 
 				"\nMarca: "  + getBrand() + 
 				"\nColore: "  + getColor() +

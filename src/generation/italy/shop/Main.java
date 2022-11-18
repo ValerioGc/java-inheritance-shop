@@ -10,7 +10,7 @@ public class Main {
 		System.out.println(pr1);
 		
 		Product pr2 = new Product("Prodotto 2", "Brand 2", 100, 22);
-		System.out.println("\n" + pr2);
+		System.out.println("\n" + pr2 + "\n");
 		
 		
 		Smartphone smp1 = new Smartphone(30);
@@ -20,8 +20,15 @@ public class Main {
 		smp1.setMemory(64);
 		smp1.setTax(22);
 		
-		System.err.println(smp1);
+		System.err.println(smp1 + "\n");
 		
+		Television tv1 = new Television(55, true);
+		tv1.setName("NU7000");
+		tv1.setBrand("Samsung");
+		tv1.setPrice(500);
+		tv1.setTax(27);
+		
+		System.err.println(tv1 + "\n");
 		
 		Headphones hdp1 = new Headphones("Bianche", true);
 		hdp1.setName("Void Elite");
