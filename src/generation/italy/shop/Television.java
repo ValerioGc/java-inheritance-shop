@@ -5,13 +5,11 @@ public class Television extends Product{
 	private int screenSize;
 	private boolean smart;
 	
-	public Television(int screenSize, boolean smart) {
+
+	public Television(String name, String brand, int price, int tax, int screenSize, boolean smart) {
+		super(name, brand, price, tax);
 		this.screenSize = screenSize;
 		this.smart = smart;
-	}
-	
-	public Television(String name, String brand, int price, int tax) {
-		super(name, brand, price, tax);
 	}
 	
 	
@@ -38,15 +36,10 @@ public class Television extends Product{
 
 	@Override
 	public String toString(){
-		return "Prodotto: TV" +
-				"\nNome: "  + getName() + 
-				"\nMarca: "  + getBrand() + 
-				"\nDimensione: "  + getScreenSize() + " pollici" + 
-				"\nSmart: "  + isSmart() + 
-				"\nPrezzo: "  + getPrice() + EUR + 
-				"\nTasse: " + getTax() + PERC + 
-				"\nPrezzo con tasse: " + getTaxedPrice() + " " + EUR + 
-				"\n-----------------------------------" ;
+		return "\n: "  + super.toString()
+				+ "\nDimensione: "  + getScreenSize() + " pollici"  
+				+ "\nSmart: "  + isSmart()  
+				+ "\n-----------------------------------";
 	}
 
 }

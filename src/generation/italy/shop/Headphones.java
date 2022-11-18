@@ -4,15 +4,12 @@ public class Headphones extends Product {
 
 	private String color;
 	private boolean wireless;
+
 	
-	
-	public Headphones(String color, boolean wireless) {
+	public Headphones(String name, String brand, int price, int tax, String color, boolean wireless) {
+		super(name, brand, price, tax);
 		this.color = color;
 		this.wireless = wireless;
-	}
-	
-	public Headphones(String name, String brand, int price, int tax) {
-		super(name, brand, price, tax);
 	}
 	
 	
@@ -41,14 +38,9 @@ public class Headphones extends Product {
 
 	@Override
 	public String toString(){
-		return "Prodotto: Cuffie" +
-				"\nNome: "  + getName() + 
-				"\nMarca: "  + getBrand() + 
-				"\nColore: "  + getColor() +
-				"\nPrezzo: "  + getPrice() + EUR +
-				"\nCollegamento: " + isWireless() + 
-				"\nTasse: " + getTax() + " " + PERC + 
-				"\nPrezzo con tasse: " + getTaxedPrice() + " " + EUR + 
-				"\n-----------------------------------" ;
+		return  "\n: "  + super.toString()
+				+ "\nColore: "  + getColor() 
+				+ "\nCollegamento: " + isWireless()  
+				+ "\n-----------------------------------";
 	}
 }

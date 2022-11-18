@@ -58,7 +58,7 @@ public class Product {
 		}
  	}
 	public int getTaxedPrice() {
-		return price += (this.price * tax) / 100;
+		return price + (this.price * tax) / 100;
 	}
 	
 // P. Taxes
@@ -76,14 +76,13 @@ public class Product {
 	
 	@Override
 	public String toString() {
-		return "Prodotto: -------------------------" + 
-				"\nCodice: " + getCode() +
-				"\nNome: " + getName() +
-				"\nBrand: " + getBrand() +
-				"\nPrezzo: " + getPrice() + " " + EUR +
-				"\nTasse: " + getTax() + " " + PERC + 
-				"\nPrezzo con tasse: " + getTaxedPrice() + " " + EUR +
-				"\n----------------------------------"; 
+		return "Prodotto: -------------------------" 
+				+ "\nCodice: " + getCode() 
+				+ "\nNome: " + getName() 
+				+ "\nBrand: " + getBrand() 
+				+ "\nPrezzo: " + getPrice() + " " + EUR
+				+ "\nTasse: " + getTax() + " " + PERC 
+				+ "\nPrezzo con tasse: " + getTaxedPrice() + " " + EUR; 
 	}
 	
 }

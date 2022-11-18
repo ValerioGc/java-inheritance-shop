@@ -4,23 +4,21 @@ import java.util.Random;
 
 public class Smartphone extends Product{
 	
-	private int imeiCode;
 	private int memory;
+	private String imeiCode;
 	
 	
-	public Smartphone(int memory) {
-		Random rnd = new Random();
-		this.imeiCode = rnd.nextInt(9000) + 1000;
-		this.memory = memory;
-	}
-	
-	public Smartphone(String name, String brand, int price, int tax, int memory) {
+	public Smartphone(String name, String brand, int price, int tax, int memory, String imeiCode) {
 		super(name, brand, price, tax);
 		this.memory = memory;
+		this.imeiCode = imeiCode;
 	}
 
-	public int getImeiCode() {
+	public String getImeiCode() {
 		return imeiCode;
+	}
+	public void setImeiCode(String imeiCode) {
+		this.imeiCode = imeiCode;
 	}
 
 	public int getMemory() {
@@ -32,15 +30,11 @@ public class Smartphone extends Product{
 	}
 	@Override
 	public String toString(){
-		return "Prodotto: Smartphone" +
-				"\nNome: "  + getName() + 
-				"\nMarca: "  + getBrand() +
-				"\nIMEI: "  +  getImeiCode() + 
-				"\nMemoria: "  + getMemory() + "GB" +
-				"\nPrezzo: "  + getPrice() + EUR + 
-				"\nTasse: " + getTax() + " " + PERC + 
-				"\nPrezzo con tasse: " + getTaxedPrice() + " " + EUR + 
-				"\n-----------------------------------" ;
+		return 
+				"\n" + super.toString() 
+				+ "\nIMEI: "  +  getImeiCode()  
+				+ "\nMemoria: "  + getMemory() + "GB" 
+				+ "\n-----------------------------------";
 	}
 	
 }
